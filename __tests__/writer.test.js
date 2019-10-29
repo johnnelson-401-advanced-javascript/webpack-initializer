@@ -6,7 +6,7 @@ const writeBabel = require('../writers/babel-writer');
 const writeWebPack = require('../writers/webpack-writer');
 const writeGitIgnore = require('../writers/git-ignore-writer');
 const writeTravis = require('../writers/travis-writer');
-
+const { writeIndexJS, writeIndexHTML } = require('../writers/src-index-writer');
 
 describe('writer.js', () => {
   it('writes a text file', () => {
@@ -14,8 +14,7 @@ describe('writer.js', () => {
     let str = 'test string';
     let path = '.';
     write(path, str);
-    expect(fs.writeFileSync.mock.calls[0][0]).toBe(path);
-    expect(fs.writeFileSync.mock.calls[0][1]).toBe(str);
+    expect(fs.writeFileSync).toHaveBeenCalledWith(path, str);
   });
 
   it('writeJSON writes a JSON object', () => {
@@ -67,6 +66,20 @@ describe('writer.js', () => {
     let path = '.';
     writeTravis(path);
     expect(fs.writeFileSync).toHaveBeenCalledWith(path + '/.travis.yml', expect.any(String));    
+  });
+  
+  it('writeIndex', () => {
+    fs.writeFileSync = jest.fn();
+    let path = '.';
+    writeIndexJS(path);
+    expect(fs.writeFileSync).toHaveBeenCalledWith(path + '/src/index.js', expect.any(String));    
+  });
+  
+  it('writeIndex', () => {
+    fs.writeFileSync = jest.fn();
+    let path = '.';
+    writeIndexHTML(path);
+    expect(fs.writeFileSync).toHaveBeenCalledWith(path + '/src/index.html', expect.any(String));    
   });
 
 });
