@@ -3,6 +3,7 @@ const { write, writeJSON } = require('../writer');
 const writePackageJSON = require('../package-json-writer');
 const writeLinter = require('../eslint-writer');
 const writeBabel = require('../babel-writer');
+const writeWebPack = require('../webpack-writer');
 
 
 describe('writer.js', () => {
@@ -43,6 +44,13 @@ describe('writer.js', () => {
     let path = '.';
     writeBabel(path);
     expect(fs.writeFileSync).toHaveBeenCalledWith(path + '/.babelrc', expect.any(String));
+  });
+
+  it('webPack', () => {
+    fs.writeFileSync = jest.fn();
+    let path = '.';
+    writeWebPack(path);
+    expect(fs.writeFileSync).toHaveBeenCalledWith(path + '/webpack.config.js', expect.any(String));    
   });
 
 });
