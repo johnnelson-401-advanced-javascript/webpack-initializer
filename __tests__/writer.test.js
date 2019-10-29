@@ -1,11 +1,11 @@
 const fs = require('fs');
-const { write, writeJSON } = require('../writer');
-const writePackageJSON = require('../package-json-writer');
-const writeLinter = require('../eslint-writer');
-const writeBabel = require('../babel-writer');
-const writeWebPack = require('../webpack-writer');
-const writeGitIgnore = require('../git-ignore-writer');
-const writeTravis = require('../travis-writer');
+const { write, writeJSON } = require('../writers/writer');
+const writePackageJSON = require('../writers/package-json-writer');
+const writeLinter = require('../writers/eslint-writer');
+const writeBabel = require('../writers/babel-writer');
+const writeWebPack = require('../writers/webpack-writer');
+const writeGitIgnore = require('../writers/git-ignore-writer');
+const writeTravis = require('../writers/travis-writer');
 
 
 describe('writer.js', () => {
