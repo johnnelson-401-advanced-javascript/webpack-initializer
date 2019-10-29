@@ -1,0 +1,26 @@
+{
+  "name": "webpack-initializer",
+  "version": "1.0.0",
+  "description": "NPM Package to Initialize front end projects with React",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnnelson-401-advanced-javascript/webpack-initializer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnnelson-401-advanced-javascript/webpack-initializer/issues"
+  },
+  "homepage": "https://github.com/johnnelson-401-advanced-javascript/webpack-initializer#readme",
+  "dependencies": {
+    "prettier": "^1.18.2"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}

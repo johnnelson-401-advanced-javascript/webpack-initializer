@@ -1,15 +1,15 @@
 const fs = require('fs');
 
-function write(str, path) {
-  fs.writeFile(path, str, (err) => {
-    if(err) throw err;
-  });
+function write(path, str) {
+  fs.writeFileSync(path, str);
 }
 
-function writeJSON(obj, path) {
-  fs.writeFile(path, obj, JSON, (err) => {
-    if(err) throw err;
-  });
+function writeJSON(path, obj) {
+  const stringObj = JSON.stringify(obj, null, 2);
+  write(path, stringObj);
 }
 
-module.exports = write, writeJSON;
+module.exports = {
+  write,
+  writeJSON
+};
