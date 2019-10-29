@@ -1,5 +1,4 @@
 const { writeJSON } = require('./writer');
-// const path = require('path');
 
 function writePackageJSON(path) {
   

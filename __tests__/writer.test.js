@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { write, writeJSON } = require('../writer');
 const writePackageJSON = require('../package-json-writer');
+const writeLinter = require('../eslint-writer');
 
 
 describe('writer.js', () => {
@@ -27,6 +28,13 @@ describe('writer.js', () => {
     writePackageJSON(path);
     expect(fs.writeFileSync).toHaveBeenCalledWith(path + '/package.json', expect.any(String));
 
+  });
+
+  it('Linter', () => {
+    fs.writeFileSync = jest.fn();
+    let path = '.';
+    writeLinter(path);
+    expect(fs.writeFileSync).toHaveBeenCalledWith(path + '/.eslintrc', expect.any(String));
   });
 
 });
