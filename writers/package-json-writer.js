@@ -1,7 +1,7 @@
 const { writeJSON } = require('./writer');
 
 function writePackageJSON(path) {
-  
+
   const packageJson = {
     name: 'starter-code',
     version: '1.0.0',

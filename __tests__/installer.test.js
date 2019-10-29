@@ -21,7 +21,6 @@ describe('Installers', () => {
     let path = '.';
     installDependencies(path);   
     installDevDependencies(path);    
-    console.log(child_process.execSync.mock.calls[1][0][7]);
     expect(child_process.execSync.mock.calls[0][0]).toBe(`npm i react react-dom`);
     expect(child_process.execSync.mock.calls[1][0][7]).toBe(`D`);
   });
