@@ -25,5 +25,8 @@
     "install": "^0.13.0",
     "jest": "^24.9.0",
     "me": "^0.3.0"
-  }
+  },
+  "bin": {
+    "create-john-webpack-init": "./index.js"
+    }
 }
