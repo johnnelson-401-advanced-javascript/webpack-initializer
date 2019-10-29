@@ -37,5 +37,3 @@ function writePackageJSON(path) {
 }
 
 module.exports = writePackageJSON;
-let path = ('./__tests__');
-writePackageJSON(path);
