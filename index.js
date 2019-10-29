@@ -4,7 +4,7 @@ const writeGitIgnore = require('./writers/git-ignore-writer');
 const writeBabel = require('./writers/babel-writer');
 const writeLinter = require('./writers/eslint-writer');
 const writePackageJSON = require('./writers/package-json-writer');
-const { writeIndexJS, writeIndexHTML } = require('./writers/package-json-writer');
+const { writeIndexJS, writeIndexHTML } = require('./writers/src-index-writer');
 const writeTravis = require('./writers/travis-writer');
 const writeWebPack = require('./writers/webpack-writer');
 //importing dependency installers
