@@ -4,6 +4,7 @@ const writePackageJSON = require('../package-json-writer');
 const writeLinter = require('../eslint-writer');
 const writeBabel = require('../babel-writer');
 const writeWebPack = require('../webpack-writer');
+const writeGitIgnore = require('../git-ignore-writer');
 
 
 describe('writer.js', () => {
@@ -51,6 +52,14 @@ describe('writer.js', () => {
     let path = '.';
     writeWebPack(path);
     expect(fs.writeFileSync).toHaveBeenCalledWith(path + '/webpack.config.js', expect.any(String));    
+  });
+
+  it('gitignore', () => {
+    fs.writeFileSync = jest.fn();
+    let path = '.';
+    writeGitIgnore(path);
+    expect(fs.writeFileSync).toHaveBeenCalledWith(path + '/.gitignore', expect.any(String));    
+
   });
 
 });
