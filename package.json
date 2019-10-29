@@ -1,6 +1,6 @@
 {
-  "name": "john-webpack-init",
-  "version": "1.0.0",
+  "name": "create-john-webpack-init",
+  "version": "1.0.1",
   "description": "NPM Package to Initialize front end projects with React",
   "main": "index.js",
   "scripts": {
@@ -22,9 +22,7 @@
   },
   "devDependencies": {
     "prettier": "^1.18.2",
-    "install": "^0.13.0",
-    "jest": "^24.9.0",
-    "me": "^0.3.0"
+    "jest": "^24.9.0"
   },
   "bin": {
     "create-john-webpack-init": "./index.js"
