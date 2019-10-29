@@ -18,13 +18,12 @@
     "url": "https://github.com/johnnelson-401-advanced-javascript/webpack-initializer/issues"
   },
   "homepage": "https://github.com/johnnelson-401-advanced-javascript/webpack-initializer#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "prettier": "^1.18.2",
     "jest": "^24.9.0"
   },
   "bin": {
     "create-john-webpack-init": "./index.js"
-    }
+  }
 }
