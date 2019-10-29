@@ -1,5 +1,5 @@
 {
-  "name": "webpack-initializer",
+  "name": "john-webpack-init",
   "version": "1.0.0",
   "description": "NPM Package to Initialize front end projects with React",
   "main": "index.js",
