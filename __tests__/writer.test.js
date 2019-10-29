@@ -2,6 +2,7 @@ const fs = require('fs');
 const { write, writeJSON } = require('../writer');
 const writePackageJSON = require('../package-json-writer');
 const writeLinter = require('../eslint-writer');
+const writeBabel = require('../babel-writer');
 
 
 describe('writer.js', () => {
@@ -35,6 +36,13 @@ describe('writer.js', () => {
     let path = '.';
     writeLinter(path);
     expect(fs.writeFileSync).toHaveBeenCalledWith(path + '/.eslintrc', expect.any(String));
+  });
+
+  it('writeBabel', () => {
+    fs.writeFileSync = jest.fn();
+    let path = '.';
+    writeBabel(path);
+    expect(fs.writeFileSync).toHaveBeenCalledWith(path + '/.babelrc', expect.any(String));
   });
 
 });
