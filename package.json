@@ -1,6 +1,6 @@
 {
   "name": "create-john-webpack-init",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "NPM Package to Initialize front end projects with React",
   "main": "index.js",
   "scripts": {
