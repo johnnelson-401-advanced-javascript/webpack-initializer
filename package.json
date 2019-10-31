@@ -1,0 +1,29 @@
+{
+  "name": "create-john-webpack-init",
+  "version": "1.0.4",
+  "description": "NPM Package to Initialize front end projects with React",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "npm run test -- --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnnelson-401-advanced-javascript/webpack-initializer.git"
+  },
+  "keywords": [],
+  "author": "John Nelson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnnelson-401-advanced-javascript/webpack-initializer/issues"
+  },
+  "homepage": "https://github.com/johnnelson-401-advanced-javascript/webpack-initializer#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "jest": "^24.9.0"
+  },
+  "bin": {
+    "create-john-webpack-init": "./index.js"
+  }
+}
